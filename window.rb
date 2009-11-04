@@ -7,11 +7,18 @@ include Gtk
 
 Logo="images/icons/logo.jpg"
 
-if __FILE__ == $0
-  # TODO Generated stub
+module Utils
+  module_function
+  def show_error_dialog(window, text)
+    dialog = Gtk::MessageDialog.new(window, Gtk::Dialog::MODAL, 
+                                    Gtk::MessageDialog::ERROR, 
+                                    Gtk::MessageDialog::BUTTONS_CLOSE, text)
+    dialog.run
+    dialog.destroy
+  end
 end
 
-class Dobbswindow < Gtk::Window
+class DobbsWindow < Gtk::Window
 
   def initialize
     super
