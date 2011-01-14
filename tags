@@ -1,0 +1,237 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BoolItem	setup.rb	/^  class BoolItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+ConfigTable	setup.rb	/^class ConfigTable$/;"	c
+ENOTEMPTY	setup.rb	/^    class ENOTEMPTY$/;"	c	class:Errno
+Enumerable	setup.rb	/^  module Enumerable$/;"	m
+Errno	setup.rb	/^  module Errno$/;"	m
+ExecItem	setup.rb	/^  class ExecItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+FileOperations	setup.rb	/^module FileOperations$/;"	m	class:ConfigTable
+HookScriptAPI	setup.rb	/^module HookScriptAPI$/;"	m	class:ConfigTable
+ImageWidget	lib/slackware/gui/image_widget.rb	/^class ImageWidget < Qt::Widget$/;"	c
+Installer	setup.rb	/^class Installer$/;"	c	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+Item	setup.rb	/^  class Item$/;"	c	class:ConfigTable.multipackage_entries
+MainWindow	lib/slackware/gui/main_window.rb	/^class MainWindow < Qt::MainWindow$/;"	c
+MetaConfigEnvironment	setup.rb	/^  class MetaConfigEnvironment$/;"	c	class:ConfigTable.multipackage_entries
+PackageSelectionItem	setup.rb	/^  class PackageSelectionItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+PathItem	setup.rb	/^  class PathItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+ProgramItem	setup.rb	/^  class ProgramItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+SelectItem	setup.rb	/^  class SelectItem < Item$/;"	c	class:ConfigTable.multipackage_entries
+SetupError	setup.rb	/^class SetupError < StandardError; end$/;"	c	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+Shebang	setup.rb	/^  class Shebang$/;"	c	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+ToplevelInstaller	setup.rb	/^class ToplevelInstaller$/;"	c	class:ConfigTable
+ToplevelInstallerMulti	setup.rb	/^class ToplevelInstallerMulti < ToplevelInstaller$/;"	c	class:ConfigTable.ToplevelInstaller
+TreeItem	lib/slackware/gui/tree_item.rb	/^class TreeItem$/;"	c
+TreeModel	lib/slackware/gui/tree_model.rb	/^class TreeModel < Qt::AbstractItemModel$/;"	c
+[]	setup.rb	/^  def [](key)$/;"	f	class:ConfigTable
+[]=	setup.rb	/^  def []=(key, val)$/;"	f	class:ConfigTable
+about	lib/slackware/gui/main_window.rb	/^  def about$/;"	f	class:MainWindow
+add	setup.rb	/^  def add(item)$/;"	f	class:ConfigTable
+add_bool_config	setup.rb	/^    def add_bool_config(name, default, desc)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+add_config	setup.rb	/^    def add_config(item)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+add_path_config	setup.rb	/^    def add_path_config(name, default, desc)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+appendChild	lib/slackware/gui/tree_item.rb	/^  def appendChild(item)$/;"	f	class:TreeItem
+binread	setup.rb	/^def File.binread(fname)$/;"	F
+bool_config?	setup.rb	/^    def bool_config?(name)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+check	setup.rb	/^    def check(path)$/;"	f	class:ConfigTable.multipackage_entries.PathItem
+check	setup.rb	/^    def check(val)$/;"	f	class:ConfigTable.multipackage_entries.BoolItem
+check	setup.rb	/^    def check(val)$/;"	f	class:ConfigTable.multipackage_entries.Item
+check	setup.rb	/^    def check(val)$/;"	f	class:ConfigTable.multipackage_entries.PackageSelectionItem
+check	setup.rb	/^    def check(val)$/;"	f	class:ConfigTable.multipackage_entries.SelectItem
+child	lib/slackware/gui/tree_item.rb	/^  def child(row)$/;"	f	class:TreeItem
+childCount	lib/slackware/gui/tree_item.rb	/^  def childCount$/;"	f	class:TreeItem
+childRow	lib/slackware/gui/tree_item.rb	/^  def childRow(item)$/;"	f	class:TreeItem
+clean_dir_ext	setup.rb	/^  def clean_dir_ext(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+columnCount	lib/slackware/gui/tree_item.rb	/^  def columnCount$/;"	f	class:TreeItem
+columnCount	lib/slackware/gui/tree_model.rb	/^  def columnCount(parent)$/;"	f	class:TreeModel
+command	setup.rb	/^  def command(*args)$/;"	f	class:ConfigTable.FileOperations
+config	setup.rb	/^  def config(key)$/;"	f	class:ConfigTable.ToplevelInstaller
+config?	setup.rb	/^    def config?(name)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+config_dir_ext	setup.rb	/^  def config_dir_ext(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+config_names	setup.rb	/^    def config_names$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.BoolItem
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.ExecItem
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.PackageSelectionItem
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.PathItem
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.ProgramItem
+config_type	setup.rb	/^    def config_type$/;"	f	class:ConfigTable.multipackage_entries.SelectItem
+curr_objdir	setup.rb	/^  def curr_objdir$/;"	f	class:ConfigTable.HookScriptAPI
+curr_srcdir	setup.rb	/^  def curr_srcdir$/;"	f	class:ConfigTable.HookScriptAPI
+data	lib/slackware/gui/tree_item.rb	/^  def data(column)$/;"	f	class:TreeItem
+data	lib/slackware/gui/tree_model.rb	/^  def data(index, role)$/;"	f	class:TreeModel
+declare_packages	setup.rb	/^    def declare_packages(list)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+diff?	setup.rb	/^  def diff?(new_content, path)$/;"	f	class:ConfigTable.FileOperations
+dir	setup.rb	/^def File.dir?(path)$/;"	F
+directories_of	setup.rb	/^  def directories_of(dir)$/;"	f	class:ConfigTable.FileOperations
+distclean_dir_ext	setup.rb	/^  def distclean_dir_ext(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+dive_into	setup.rb	/^  def dive_into(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+dllext	setup.rb	/^  def dllext$/;"	f	class:ConfigTable.multipackage_entries
+each	setup.rb	/^  def each(&block)$/;"	f	class:ConfigTable
+each_selected_installers	setup.rb	/^  def each_selected_installers$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+evaluate	setup.rb	/^    def evaluate(val, table)$/;"	f	class:ConfigTable.multipackage_entries.ExecItem
+exec_clean	setup.rb	/^  def exec_clean$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_clean	setup.rb	/^  def exec_clean$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_clean	setup.rb	/^  def exec_clean$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_config	setup.rb	/^  def exec_config$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_config	setup.rb	/^  def exec_config$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_config	setup.rb	/^  def exec_config$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_distclean	setup.rb	/^  def exec_distclean$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_distclean	setup.rb	/^  def exec_distclean$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_distclean	setup.rb	/^  def exec_distclean$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_install	setup.rb	/^  def exec_install$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_install	setup.rb	/^  def exec_install$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_install	setup.rb	/^  def exec_install$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_setup	setup.rb	/^  def exec_setup$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_setup	setup.rb	/^  def exec_setup$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_setup	setup.rb	/^  def exec_setup$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_show	setup.rb	/^  def exec_show$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+exec_task_traverse	setup.rb	/^  def exec_task_traverse(task)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_test	setup.rb	/^  def exec_test$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+exec_test	setup.rb	/^  def exec_test$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+exec_test	setup.rb	/^  def exec_test$/;"	f	class:ConfigTable.ToplevelInstaller.print_usage
+existfiles	setup.rb	/^  def existfiles$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+extconf	setup.rb	/^  def extconf$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+extdir?	setup.rb	/^  def extdir?(dir)$/;"	f	class:ConfigTable.FileOperations
+extract_selection	setup.rb	/^  def extract_selection(list)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+files_of	setup.rb	/^  def files_of(dir)$/;"	f	class:ConfigTable.FileOperations
+fixup	setup.rb	/^  def fixup$/;"	f	class:ConfigTable.multipackage_entries
+flags	lib/slackware/gui/tree_model.rb	/^  def flags(index)$/;"	f	class:TreeModel
+force_remove_file	setup.rb	/^  def force_remove_file(path)$/;"	f	class:ConfigTable.FileOperations
+get_config	setup.rb	/^  def get_config(key)$/;"	f	class:ConfigTable.HookScriptAPI
+glob_reject	setup.rb	/^  def glob_reject(pats, ents)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+glob_select	setup.rb	/^  def glob_select(pat, ents)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+globs2re	setup.rb	/^  def globs2re(pats)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+headerData	lib/slackware/gui/tree_model.rb	/^  def headerData(section, orientation, role = Qt::DisplayRole)$/;"	f	class:TreeModel
+help_opt	setup.rb	/^    def help_opt$/;"	f	class:ConfigTable.multipackage_entries.BoolItem
+help_opt	setup.rb	/^    def help_opt$/;"	f	class:ConfigTable.multipackage_entries.Item
+hookfiles	setup.rb	/^  def hookfiles$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+index	lib/slackware/gui/tree_model.rb	/^  def index(row, column, parent)$/;"	f	class:TreeModel
+init_installers	setup.rb	/^  def init_installers$/;"	f	class:ConfigTable.ToplevelInstaller
+init_installers	setup.rb	/^  def init_installers$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+initialize	lib/slackware/gui/image_widget.rb	/^  def initialize(parent=nil)$/;"	f	class:ImageWidget
+initialize	lib/slackware/gui/main_window.rb	/^  def initialize(parent=nil)$/;"	f	class:MainWindow
+initialize	lib/slackware/gui/tree_item.rb	/^  def initialize(data, parent=nil)$/;"	f	class:TreeItem
+initialize	lib/slackware/gui/tree_model.rb	/^  def initialize(obj, parent=nil)$/;"	f	class:TreeModel
+initialize	setup.rb	/^    def initialize(cmd, args = [])$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer.Shebang
+initialize	setup.rb	/^    def initialize(config, installer)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+initialize	setup.rb	/^    def initialize(name, selection, default, desc)$/;"	f	class:ConfigTable.multipackage_entries.SelectItem
+initialize	setup.rb	/^    def initialize(name, selection, desc, &block)$/;"	f	class:ConfigTable.multipackage_entries.ExecItem
+initialize	setup.rb	/^    def initialize(name, template, default, desc)$/;"	f	class:ConfigTable.multipackage_entries.Item
+initialize	setup.rb	/^    def initialize(name, template, default, help_default, desc)$/;"	f	class:ConfigTable.multipackage_entries.PackageSelectionItem
+initialize	setup.rb	/^  def initialize(ardir_root, config)$/;"	f	class:ConfigTable.ToplevelInstaller
+initialize	setup.rb	/^  def initialize(ardir_root, config)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+initialize	setup.rb	/^  def initialize(config, srcroot, objroot)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+initialize	setup.rb	/^  def initialize(rbconfig)$/;"	f	class:ConfigTable
+inspect	setup.rb	/^  def inspect$/;"	f	class:ConfigTable.ToplevelInstaller
+inspect	setup.rb	/^  def inspect$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install	setup.rb	/^  def install(from, dest, mode, prefix = nil)$/;"	f	class:ConfigTable.FileOperations
+install_dir_bin	setup.rb	/^  def install_dir_bin(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_dir_conf	setup.rb	/^  def install_dir_conf(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_dir_data	setup.rb	/^  def install_dir_data(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_dir_ext	setup.rb	/^  def install_dir_ext(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_dir_lib	setup.rb	/^  def install_dir_lib(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_dir_man	setup.rb	/^  def install_dir_man(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+install_files	setup.rb	/^  def install_files(list, dest, mode)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+invoke	setup.rb	/^  def ToplevelInstaller.invoke$/;"	F	class:ConfigTable.ToplevelInstaller
+invoke	setup.rb	/^  def invoke$/;"	f	class:ConfigTable.ToplevelInstaller
+key?	setup.rb	/^  def key?(name)$/;"	f	class:ConfigTable
+libfiles	setup.rb	/^  def libfiles$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+load	setup.rb	/^    def Shebang.load(path)$/;"	F	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer.Shebang
+load_multipackage_entries	setup.rb	/^  def load_multipackage_entries$/;"	f	class:ConfigTable
+load_package	lib/slackware/gui/main_window.rb	/^  def load_package(file)$/;"	f	class:MainWindow
+load_pixmap	lib/slackware/gui/image_widget.rb	/^  def load_pixmap$/;"	f	class:ImageWidget
+load_rbconfig	setup.rb	/^  def ToplevelInstaller.load_rbconfig$/;"	F	class:ConfigTable.ToplevelInstaller
+load_savefile	setup.rb	/^  def load_savefile$/;"	f	class:ConfigTable
+load_script	setup.rb	/^  def load_script(path, inst = nil)$/;"	f	class:ConfigTable
+load_standard_entries	setup.rb	/^  def load_standard_entries$/;"	f	class:ConfigTable
+lookup	setup.rb	/^  def lookup(name)$/;"	f	class:ConfigTable
+make	setup.rb	/^  def make(task = nil)$/;"	f	class:ConfigTable.FileOperations
+mapdir	setup.rb	/^  def mapdir(ents)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+mkdir_p	setup.rb	/^  def mkdir_p(dirname, prefix = nil)$/;"	f	class:ConfigTable.FileOperations
+move_file	setup.rb	/^  def move_file(src, dest)$/;"	f	class:ConfigTable.FileOperations
+multipackage	setup.rb	/^  def ToplevelInstaller.multipackage?$/;"	F	class:ConfigTable.ToplevelInstaller
+multipackage_entries	setup.rb	/^  def multipackage_entries$/;"	f	class:ConfigTable
+names	setup.rb	/^  def names$/;"	f	class:ConfigTable
+new_shebang	setup.rb	/^  def new_shebang(old)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+no_harm?	setup.rb	/^  def no_harm?$/;"	f	class:ConfigTable
+no_harm?	setup.rb	/^  def no_harm?$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+no_harm?	setup.rb	/^  def no_harm?$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+noop	setup.rb	/^  def noop(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+objdir_root	setup.rb	/^  def objdir_root$/;"	f	class:ConfigTable.ToplevelInstaller
+objdir_root	setup.rb	/^  def objdir_root$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+open_atomic_writer	setup.rb	/^  def open_atomic_writer(path, &block)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+packages	setup.rb	/^    def packages$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+packages=	setup.rb	/^  def packages=(list)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+paintEvent	lib/slackware/gui/image_widget.rb	/^  def paintEvent(event)$/;"	f	class:ImageWidget
+parent	lib/slackware/gui/tree_item.rb	/^  def parent$/;"	f	class:TreeItem
+parent	lib/slackware/gui/tree_model.rb	/^  def parent(index)$/;"	f	class:TreeModel
+parse	setup.rb	/^    def Shebang.parse(line)$/;"	F	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer.Shebang
+parse_opt	setup.rb	/^  def parse_opt(opt)$/;"	f	class:ConfigTable.multipackage_entries
+parsearg_config	setup.rb	/^  def parsearg_config$/;"	f	class:ConfigTable.ToplevelInstaller
+parsearg_global	setup.rb	/^  def parsearg_global$/;"	f	class:ConfigTable.ToplevelInstaller
+parsearg_install	setup.rb	/^  def parsearg_install$/;"	f	class:ConfigTable.ToplevelInstaller
+parsearg_no_options	setup.rb	/^  def parsearg_no_options$/;"	f	class:ConfigTable.ToplevelInstaller
+path_config?	setup.rb	/^    def path_config?(name)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+print_usage	setup.rb	/^  def print_usage(f)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+print_usage	setup.rb	/^  def print_usage(out)$/;"	f	class:ConfigTable.ToplevelInstaller
+process_children	lib/slackware/gui/tree_model.rb	/^  def process_children(children, parent)$/;"	f	class:TreeModel
+read	setup.rb	/^  def File.read(fname)$/;"	F
+relpath	setup.rb	/^  def relpath$/;"	f	class:ConfigTable.ToplevelInstaller
+relpath	setup.rb	/^  def relpath$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+remove	setup.rb	/^  def remove(name)$/;"	f	class:ConfigTable
+remove_config	setup.rb	/^    def remove_config(name)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+remove_file	setup.rb	/^  def remove_file(path)$/;"	f	class:ConfigTable.FileOperations
+remove_tree	setup.rb	/^  def remove_tree(path)$/;"	f	class:ConfigTable.FileOperations
+remove_tree0	setup.rb	/^  def remove_tree0(path)$/;"	f	class:ConfigTable.FileOperations
+resolve	setup.rb	/^    def resolve(table)$/;"	f	class:ConfigTable.multipackage_entries.ExecItem
+resolve	setup.rb	/^    def resolve(table)$/;"	f	class:ConfigTable.multipackage_entries.Item
+rm_f	setup.rb	/^  def rm_f(path)$/;"	f	class:ConfigTable.FileOperations
+rm_rf	setup.rb	/^  def rm_rf(path)$/;"	f	class:ConfigTable.FileOperations
+row	lib/slackware/gui/tree_item.rb	/^  def row$/;"	f	class:TreeItem
+rowCount	lib/slackware/gui/tree_model.rb	/^  def rowCount(parent)$/;"	f	class:TreeModel
+ruby	setup.rb	/^  def ruby(*args)$/;"	f	class:ConfigTable.FileOperations
+rubyextentions	setup.rb	/^  def rubyextentions(dir)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+run_hook	setup.rb	/^  def run_hook(id)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+run_hook	setup.rb	/^  def run_hook(id)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+run_metaconfigs	setup.rb	/^  def run_metaconfigs$/;"	f	class:ConfigTable.ToplevelInstaller
+run_metaconfigs	setup.rb	/^  def run_metaconfigs$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+save	setup.rb	/^  def save$/;"	f	class:ConfigTable
+savefile	setup.rb	/^  def savefile$/;"	f	class:ConfigTable
+set	setup.rb	/^    def set(val)$/;"	f	class:ConfigTable.multipackage_entries.Item
+set_config	setup.rb	/^  def set_config(key, val)$/;"	f	class:ConfigTable.HookScriptAPI
+set_config_default	setup.rb	/^    def set_config_default(name, default)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+setupMenus	lib/slackware/gui/main_window.rb	/^  def setupMenus$/;"	f	class:MainWindow
+setupWidgets	lib/slackware/gui/main_window.rb	/^  def setupWidgets$/;"	f	class:MainWindow
+setup_dir_bin	setup.rb	/^  def setup_dir_bin(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+setup_dir_ext	setup.rb	/^  def setup_dir_ext(rel)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+setup_rb_error	setup.rb	/^def setup_rb_error(msg)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti
+srcdir_root	setup.rb	/^  def srcdir_root$/;"	f	class:ConfigTable.ToplevelInstaller
+srcdir_root	setup.rb	/^  def srcdir_root$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+srcdirectories	setup.rb	/^  def srcdirectories(path = '.')$/;"	f	class:ConfigTable.HookScriptAPI
+srcdirectory?	setup.rb	/^  def srcdirectory?(path)$/;"	f	class:ConfigTable.HookScriptAPI
+srcentries	setup.rb	/^  def srcentries(path = '.')$/;"	f	class:ConfigTable.HookScriptAPI
+srcexist?	setup.rb	/^  def srcexist?(path)$/;"	f	class:ConfigTable.HookScriptAPI
+srcfile	setup.rb	/^  def srcfile(path)$/;"	f	class:ConfigTable.HookScriptAPI
+srcfile?	setup.rb	/^  def srcfile?(path)$/;"	f	class:ConfigTable.HookScriptAPI
+srcfiles	setup.rb	/^  def srcfiles(path = '.')$/;"	f	class:ConfigTable.HookScriptAPI
+standard_entries	setup.rb	/^  def standard_entries(rbconfig)$/;"	f	class:ConfigTable
+targetfiles	setup.rb	/^  def targetfiles$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+to_s	setup.rb	/^    def to_s$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer.Shebang
+traverse	setup.rb	/^  def traverse(task, rel, mid)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+update_shebang_line	setup.rb	/^  def update_shebang_line(path)$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+valid_task?	setup.rb	/^  def valid_task?(t)$/;"	f	class:ConfigTable.ToplevelInstaller
+valid_task_re	setup.rb	/^  def valid_task_re$/;"	f	class:ConfigTable.ToplevelInstaller
+value	setup.rb	/^    def value$/;"	f	class:ConfigTable.multipackage_entries.Item
+value?	setup.rb	/^    def value?$/;"	f	class:ConfigTable.multipackage_entries.ExecItem
+value?	setup.rb	/^    def value?$/;"	f	class:ConfigTable.multipackage_entries.Item
+value_config?	setup.rb	/^    def value_config?(name)$/;"	f	class:ConfigTable.multipackage_entries.MetaConfigEnvironment
+value_config?	setup.rb	/^  def value_config?(name)$/;"	f	class:ConfigTable.multipackage_entries
+verbose?	setup.rb	/^  def verbose?$/;"	f	class:ConfigTable
+verbose?	setup.rb	/^  def verbose?$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+verbose?	setup.rb	/^  def verbose?$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.packages=
+verbose_off	setup.rb	/^  def verbose_off$/;"	f	class:ConfigTable.ToplevelInstaller.ToplevelInstallerMulti.Installer
+view_file	lib/slackware/gui/main_window.rb	/^  def view_file$/;"	f	class:MainWindow

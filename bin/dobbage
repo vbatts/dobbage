@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# 2010, 2011 Vincent Batts, vbatts@hashbangbash.com
+#
+# Main file of Slackware package viewer.
+#
+#$: <<  File.absolute_path(File.dirname(__FILE__) + "/../lib")
+
+# Load our QtRuby main window class:
+require 'rubygems'
+require 'slackware/gui'
+
+# Launch the application:
+slackware_gui(ARGV)
+
