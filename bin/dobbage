@@ -3,7 +3,7 @@
 #
 # Main file of Slackware package viewer.
 #
-#$: <<  File.absolute_path(File.dirname(__FILE__) + "/../lib")
+$: << File.absolute_path(File.dirname(__FILE__) + "/../lib/")
 
 # Load our QtRuby main window class:
 require 'rubygems'

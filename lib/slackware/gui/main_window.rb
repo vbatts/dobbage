@@ -26,7 +26,7 @@ class MainWindow < Qt::MainWindow
   # Displays an information text box:
   def about
     # http://doc.qt.nokia.com/latest/qmessagebox.html
-    Qt::MessageBox.information(self, tr("About"), tr("Slackware Packge Viewer\n made with QtRuby."))
+    Qt::MessageBox.about(self, tr("About"), tr("Slackware Packge Viewer\n made with QtRuby."))
   end
 
   # Reads a package file, and will display information about the package,
@@ -40,17 +40,18 @@ class MainWindow < Qt::MainWindow
     # TODO this should parse the name of the file,
     # read the file list, and the install/slack-desc
     unless obj.name.nil?
-      # Load image as RMagick object:
-      @view = obj.get_image_magick(:rescale => true)
+      # FIXME this is a stub
+      # Load load package information
+      @info = obj.get_info
       unless @view # Load an empty image object.
-        @view = Slackware::Package.new
-        #XXX@view.new_image(0,0){ self.background_color = "black" }
+	p = Slackware::Package.new
+        @info = p.get_info
       end
       # Add information from the DICOM object to the the tree model and update widgets:
       model = TreeModel.new(obj)
       @treeView.model = model
       # XXX
-      @imageWidget.load_pixmap
+      #@imageWidget.load_pixmap
     else # Failed:
       Qt::MessageBox.warning(self, tr("Open file"), tr("Error: Selected file is not recognized as a Slackware package."))
     end
