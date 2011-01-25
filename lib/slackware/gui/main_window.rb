@@ -1,8 +1,9 @@
 # Main window of the application (defining GUI layout and actions).
+# vim : set ts=2 sw=2 :
 
 require 'slackware'
 require 'slackware/gui/tree_model'
-require 'slackware/gui/image_widget'
+require 'slackware/gui/package_widget'
 
 RE_SLACKWARE_PACKAGE = Regexp.new(/\.t[bxg]z$/)
 
@@ -18,6 +19,7 @@ class MainWindow < Qt::MainWindow
     super(parent)
     setupMenus
     setupWidgets
+    @logo_icon = Qt::Icon.new(":/images/icons/slackware-logo.svg"), tr("logo")
     # http://doc.qt.nokia.com/latest/qsizepolicy.html
     setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::Fixed, Qt::SizePolicy::Fixed))
     setWindowTitle(tr("Slackware Package Viewer"))
@@ -51,7 +53,7 @@ class MainWindow < Qt::MainWindow
       model = TreeModel.new(obj)
       @treeView.model = model
       # XXX
-      #@imageWidget.load_pixmap
+      @packageWidget.load_info
     else # Failed:
       Qt::MessageBox.warning(self, tr("Open file"), tr("Error: Selected file is not recognized as a Slackware package."))
     end
@@ -88,6 +90,8 @@ class MainWindow < Qt::MainWindow
   end
 
   # Setting up the widgets in the main window.
+  # XXX This should list "Installed" and "Removed" on the left
+  #
   def setupWidgets
     # Create a frame which in which widgets will be ordered horisontally:
     # http://doc.qt.nokia.com/latest/qframe.html
@@ -95,12 +99,16 @@ class MainWindow < Qt::MainWindow
     frame = Qt::Frame.new
     # http://doc.qt.nokia.com/latest/qhboxlayout.html
     frameLayout = Qt::HBoxLayout.new(frame)
-    @imageWidget = ImageWidget.new(self)
+    # XXX need a PackageWidget layout here
+    @packageWidget = PackageWidget.new(self)
     # http://doc.qt.nokia.com/latest/qtreeview.html
     @treeView = Qt::TreeView.new
+    @treeView.itemsExpandable = true
+    p @treeView
+    p @treeView.methods
     # Add the two widgets (tree view and image) to the frame:
     frameLayout.addWidget(@treeView)
-    frameLayout.addWidget(@imageWidget)
+    frameLayout.addWidget(@packageWidget)
     setCentralWidget(frame)
   end
 

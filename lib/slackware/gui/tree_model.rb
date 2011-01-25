@@ -1,4 +1,15 @@
+# vim : set ts=2 sw=2 :
 require 'slackware/gui/tree_item'
+
+class NewTreeModel < Qt::AbstractItemModel
+  def initialize(obj, parent=nil)
+    super(parent)
+  end
+  def self::add(obj, parent=nil)
+    return NewTreeModel.new(obj, parent)
+  end
+
+end
 
 # Provides a simple tree model that displays the content of the DICOM file.
 class TreeModel < Qt::AbstractItemModel
