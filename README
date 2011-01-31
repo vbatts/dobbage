@@ -4,18 +4,18 @@ Sun Jan 30 22:42:51 EST 2011
 After trying to model from existing examples,
 Dobbage is now a complete re-write.
 
-== What is it? ==
+== What is it?
  Dobbage is a simple Qt/Ruby GUI. Useful gathering a view of package information on a Slackware Linux install.
 
 
-== Dependencies ==
+== Dependencies
  * Slackware Linux ;)
  * slack-utils
  ** https://github.com/vbatts/slack-utils
  ** or https://rubygems.org/gems/slack-utils
 
 
-== License ==
+== License
 
 The MIT License
 
