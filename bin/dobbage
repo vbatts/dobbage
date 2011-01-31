@@ -10,5 +10,5 @@ require 'rubygems'
 require 'slackware/gui'
 
 # Launch the application:
-slackware_gui(ARGV)
+Slackware::Gui.launch(ARGV)
 

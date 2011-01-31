@@ -6,20 +6,22 @@
 
 # Load necessary libraries:
 require 'rubygems'
-require 'Qt4'
-#require 'RMagick'
-#require 'dicom'
+require 'Qt'
 # Load our QtRuby main window class:
-require 'slackware/gui/main_window'
+require 'slackware/gui/dobbage_window'
 
 # Another good example, is the qtsamuri example_02.rb
 
-# Launch the application:
-def slackware_gui(*args)
-  args.flatten!.compact!
-  app = Qt::Application.new(args)
-  win = MainWindow.new
-  win.show
-  app.exec
+module Slackware
+	module Gui
+		# Launch the application:
+		def self::launch(*args)
+		  args.flatten!.compact!
+		  app = Qt::Application.new(args)
+		  window = DobbageWindow.new(args)
+		  window.show
+		  app.exec
+		end
+	end
 end
 
