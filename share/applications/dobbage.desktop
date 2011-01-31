@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+
+Type=Application
+
+Name=dobbage
+GenericName=Slackware Package Viewer
+Comment=go slack yourself
+
+Icon=slackware
+
+Categories=System;Qt
+
+Exec=dobbage %U
+TryExec=dobbage
+
+MimeType=application/x-compressed-tar;application/x-bzip-compressed-tar;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;application/x-gzip-compressed-tar;
+

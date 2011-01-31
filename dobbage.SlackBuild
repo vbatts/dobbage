@@ -60,7 +60,10 @@ ruby setup.rb config
 ruby setup.rb install --prefix=$PKG
 
 mkdir -p $PKG/usr/share/pixmaps/
-cp images/icons/slackware.ico $PKG/usr/share/pixmaps/
+cp share/pixmaps/slackware.ico $PKG/usr/share/pixmaps/
+
+mkdir -p $PKG/usr/share/applications/
+cp share/applications/dobbage.desktop $PKG/usr/share/applications/
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
@@ -70,6 +73,7 @@ cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat slack-desc > $PKG/install/slack-desc
+cat doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}
