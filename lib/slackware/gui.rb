@@ -4,9 +4,6 @@
 # Main file of Slackware package viewer.
 #
 
-# Load necessary libraries:
-require 'rubygems'
-require 'Qt'
 # Load our QtRuby main window class:
 require 'slackware/gui/dobbage_window'
 
