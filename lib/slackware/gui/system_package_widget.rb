@@ -32,7 +32,13 @@ module Slackware
 				@infoWidget.clear()
 				# http://doc.qt.nokia.com/latest/qlistwidgetitem.html
 				@infoWidget.addItem(Qt::ListWidgetItem.new(package.fullname + "\n"))
-				@infoWidget.addItem(Qt::ListWidgetItem.new("Install Time: #{package.get_time}\n"))
+				if self.parent.class == RemovedPackagesTab
+					@infoWidget.addItem(Qt::ListWidgetItem.new("Remove Time: #{package.get_time}\n"))
+				elsif self.parent.class == InstalledPackagesTab
+					@infoWidget.addItem(Qt::ListWidgetItem.new("Install Time: #{package.get_time}\n"))
+				else
+					@infoWidget.addItem(Qt::ListWidgetItem.new("Time: #{package.get_time}\n"))
+				end
 				package.package_description.each {|line|
 					@infoWidget.addItem(Qt::ListWidgetItem.new(line))
 				}
