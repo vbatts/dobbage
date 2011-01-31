@@ -35,7 +35,7 @@ EOF
 			end
 		
 			def setup_icon
-				@logo_icon = Qt::Icon.new("images/icons/slackware.ico")
+				@logo_icon = Qt::Icon.new("/usr/share/pixmaps/slackware.ico")
 				self.windowIcon = @logo_icon
 			end
 		

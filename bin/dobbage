@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#! /usr/bin/ruby
 # 2010, 2011 Vincent Batts, vbatts@hashbangbash.com
 #
 # Main file of Slackware package viewer.
