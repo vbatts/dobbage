@@ -60,7 +60,7 @@ ruby setup.rb config
 ruby setup.rb install --prefix=$PKG
 
 mkdir -p $PKG/usr/share/pixmaps/
-cp share/pixmaps/slackware.ico $PKG/usr/share/pixmaps/
+cp share/pixmaps/slackware.xpm $PKG/usr/share/pixmaps/
 
 mkdir -p $PKG/usr/share/applications/
 cp share/applications/dobbage.desktop $PKG/usr/share/applications/
