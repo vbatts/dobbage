@@ -68,6 +68,7 @@ EOF
 
                         # These are mandatory overrides, required in Qt's d&d
                         # implementation.
+                        # http://doc.qt.nokia.com/4.7/dnd.html
                         def dragEnterEvent(event)
                                 if event.mimeData.hasFormat("text/plain") and event.mimeData.text() =~ /(tgz|txz|tbz)$/
                                         event.accept
