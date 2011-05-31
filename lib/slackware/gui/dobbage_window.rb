@@ -12,9 +12,10 @@ module Slackware
 			def initialize(args, parent = nil)
 				super(parent)
 		
-			 	setup_icon
-			 	setup_menus
-			 	setup_tabs
+			 	setup_icon()
+			 	setup_menus()
+			 	setup_tabs()
+                                setup_drop_events()
 		
 				self.statusBar()
 		
@@ -51,7 +52,7 @@ EOF
 				connect(exitAction, SIGNAL("triggered()"), $qApp, SLOT("quit()"))
 				connect(aboutView, SIGNAL("triggered()"), self, SLOT("about()"))
 			end
-		
+
 			def setup_tabs
   				# http://doc.qt.nokia.com/latest/qtabwidget.html
 			 	@tabWidget = Qt::TabWidget.new
@@ -59,6 +60,22 @@ EOF
 				@tabWidget.addTab(Slackware::Gui::RemovedPackagesTab.new(self), tr("Removed"))
 				self.centralWidget = @tabWidget
 			end
+
+                        def setup_drop_events
+                                setAcceptDrops(true)
+                        end
+		
+
+                        # These are mandatory overrides, required in Qt's d&d
+                        # implementation.
+                        def dragEnterEvent(event)
+                                if event.mimeData.hasFormat("text/plain") and event.mimeData.text() =~ /(tgz|txz|tbz)$/
+                                        event.accept
+                                end
+                        end
+                        def dropEvent(event)
+                                # XXX do some hot stuff here
+                        end
 		end
 	end 
 end
