@@ -26,11 +26,19 @@ module Slackware
 		
 				# Build the left side list of packages
 				@pkgs = Slackware::System.removed_packages
+
+				# This Should fix the resizing ugliness
+				len = 225
+				@packageListWidget.setMinimumWidth(len)
+				@packageListWidget.setMaximumWidth(len + 30)
+
 				@pkgs.each {|pkg|
 					# each package here,has a mouse event/SIGNAL
 					# to show it's info in right panel
 					# http://doc.qt.nokia.com/latest/qlistwidgetitem.html
 					packageListWidgetItem = Qt::ListWidgetItem.new(pkg.name)
+
+
 					# hover over info, of the full package name
 					packageListWidgetItem.setToolTip(pkg.fullname)
 					@packageListWidget.addItem(packageListWidgetItem)

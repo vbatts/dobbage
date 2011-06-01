@@ -26,6 +26,12 @@ module Slackware
 		
 				# Build the left side list of packages
 				@pkgs = Slackware::System.installed_packages
+
+				# This Should fix the resizing ugliness
+				len = 225
+				@packageListWidget.setMinimumWidth(len)
+				@packageListWidget.setMaximumWidth(len + 30)
+
 				@pkgs.each {|pkg|
 					# each package here,has a mouse event/SIGNAL
 					# to show it's info in right panel

@@ -1,5 +1,6 @@
 
 require 'Qt'
+require 'slackware/gui/packageinfowidget'
 
 module Slackware
 	module Gui
@@ -15,7 +16,7 @@ module Slackware
 				frameLayout = Qt::VBoxLayout.new(frame)
 
 				# http://doc.qt.nokia.com/latest/qlistwidget.html
-				@infoWidget = Qt::ListWidget.new(self)
+				@infoWidget = PackageInfoWidget.new(self)
 				@fileListWidget = Qt::ListWidget.new(self)
 				unless package.nil?
 					show(package)
@@ -30,18 +31,35 @@ module Slackware
 			def show(package)
 				# clear previous infoz
 				@infoWidget.clear()
-				# http://doc.qt.nokia.com/latest/qlistwidgetitem.html
-				@infoWidget.addItem(Qt::ListWidgetItem.new(package.fullname + "\n"))
-				if self.parent.class == RemovedPackagesTab
-					@infoWidget.addItem(Qt::ListWidgetItem.new("Remove Time: #{package.get_time}\n"))
-				elsif self.parent.class == InstalledPackagesTab
-					@infoWidget.addItem(Qt::ListWidgetItem.new("Install Time: #{package.get_time}\n"))
-				else
-					@infoWidget.addItem(Qt::ListWidgetItem.new("Time: #{package.get_time}\n"))
-				end
+
+				# http://doc.qt.nokia.com/latest/qlabel.html
+				text = ""
+
+				text += "<b>Package Name: </b>"
+				text += package.fullname
+				text += "<br/>"
+
+				text += "<b>Compressed Package Size: </b>"
+				text += package.compressed_size
+				text += "<br/>"
+
+				text += "<b>Uncompressed Package Size: </b>"
+				text += package.uncompressed_size
+				text += "<br/>"
+
+				text += "<b>Modification Time: </b>"
+				text += package.get_time.to_s
+				text += "<br/>"
+
+				text += "<b>Package Description: </b>"
+				text += "<pre>"
 				package.package_description.each {|line|
-					@infoWidget.addItem(Qt::ListWidgetItem.new(line))
+					text += line
+					text += "<br/>"
 				}
+				text += "</pre>"
+
+				@infoWidget.setText(tr(text))
 
 				# clear previous files
 				@fileListWidget.clear()
