@@ -11,7 +11,7 @@ module Slackware
 				setAlignment(Qt::AlignLeft)
 				setAutoFillBackground(true)
 
-				setMinimumWidth(80)
+				setMinimumWidth(90)
 				setMinimumHeight(50)
 			end
 		end # PackageInfoWidget

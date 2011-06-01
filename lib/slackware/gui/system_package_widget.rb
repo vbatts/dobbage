@@ -6,6 +6,8 @@ module Slackware
 	module Gui
 		# http://doc.qt.nokia.com/latest/qwidget.html
 		class SystemPackageWidget < Qt::Widget
+			slots 'open_package_file()'
+
 			def initialize(package = nil, parent = nil)
 				super(parent)
 				setMinimumSize(512, 512)
@@ -26,6 +28,9 @@ module Slackware
 				frameLayout.addWidget(@fileListWidget)
 		
 				self.layout = frameLayout
+
+				self.connect(@fileListWidget, SIGNAL('itemPressed(QListWidgetItem *)'),
+					     self, SIGNAL('open_package_file()'))
 			end
 
 			def show(package)
@@ -69,6 +74,13 @@ module Slackware
 					#fileListWidgetItem.setToolTip(pkg.fullname)
 					@fileListWidget.addItem(fileListWidgetItem)
 				}
+			end
+
+			def open_package_file()
+				file = File.join("/", @fileListWidget.currentItem().text)
+				if File.exist?(file) and File.readable?(file)
+					system("xdg-open #{file}")
+				end
 			end
 		end
 	end
