@@ -16,7 +16,7 @@ module Slackware
 				frameLayout = Qt::VBoxLayout.new(frame)
 
 				# http://doc.qt.nokia.com/latest/qlistwidget.html
-				@infoWidget = PackageInfoWidget.new(self)
+				@infoWidget = Slackware::Gui::PackageInfoWidget.new(self)
 				@fileListWidget = Qt::ListWidget.new(self)
 				unless package.nil?
 					show(package)
