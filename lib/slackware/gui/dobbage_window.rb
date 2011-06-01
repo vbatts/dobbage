@@ -80,6 +80,8 @@ EOF
                 end
                 def dropEvent(event)
                         # XXX do some hot stuff here
+                        # like opening a new tab for the package archive, like
+                        # showing it's info and files
                 end
         end
 end 
