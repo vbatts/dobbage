@@ -1,20 +1,20 @@
 
-== What is it? ==
+== What is it?
 Dobbage is a GUI view of package information
 on a Slackware Linux install.
 
-It uses the Qt/Ruby library <link>.
+It uses the Qt/Ruby library https://projects.kde.org/qtruby
 
 
-== Dependencies ==
+== Dependencies
 * Slackware Linux ;)
-** Which includes the qtruby library in a stock installation.
+  * <i>Which includes the qtruby by default.</i>
 * slack-utils
-** https://github.com/vbatts/slack-utils
-** or https://rubygems.org/gems/slack-utils
+  * https://github.com/vbatts/slack-utils
+  * or https://rubygems.org/gems/slack-utils
 
 
-== License ==
+== License
 
 The MIT License
 
