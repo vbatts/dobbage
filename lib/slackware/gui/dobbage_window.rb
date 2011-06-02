@@ -7,7 +7,7 @@ require 'slackware/gui/removed_packages_tab'
 module Slackware::Gui
 	# http://doc.qt.nokia.com/latest/qmainwindow.html
 	class DobbageWindow < Qt::MainWindow
-		slots 'about()'
+		slots 'show_about()', 'show_bug_report()', 'show_info_box()'
 	 
 		def initialize(args, parent = nil)
 			super(parent)
@@ -22,18 +22,39 @@ module Slackware::Gui
 			self.windowTitle = tr("Dobbage")
 		end
 
-		def about 
+		def show_bug_report()
+			cmd = "xdg-open #{DOBBAGE_URL}/issues"
+			STDERR.write("INFO: executing #{cmd.inspect}\n")
+			system(cmd)
+		end
+
+		def show_info_box()
+			r_file = "/usr/doc/dobbage-#{DOBBAGE_VERSION}/README"
+
+			if File.exist?(r_file)
+				cmd = "xdg-open #{r_file}"
+				STDERR.write("INFO: executing #{cmd.inspect}\n")
+				system(cmd)
+			else
+				b = Qt::MessageBox.new()
+				b.setText(tr("#{r_file.inspect} is not present."))
+				b.setInformativeText(tr("You should visit\n#{DOBBAGE_URL}\nfor more information"))
+				b.exec()
+			end
+
+		end
+
+		def show_about 
 			about_info = <<-EOF
-
-Dobbage lifts Slackware's skirt
-
-Slackware Linux Version: #{SLACKWARE_VERSION}
-slack-utils version: #{UTILS_VERSION}
-dobbage version: #{DOBBAGE_VERSION}
-
-Website: #{DOBBAGE_URL}
-Author: #{DOBBAGE_AUTHOR}
-
+<h2>Dobbage lifts Slackware's skirt</h2>
+<br/>
+<b>Slackware Linux Version</b>: #{SLACKWARE_VERSION}<br/>
+<b>slack-utils version</b>: #{UTILS_VERSION}<br/>
+<b>dobbage version</b>: #{DOBBAGE_VERSION}<br/>
+<br/>
+<b>Website</b>: <a href="#{DOBBAGE_URL}">#{DOBBAGE_URL}</a><br/>
+<b>Author</b>: #{DOBBAGE_AUTHOR}<br/>
+<br/>
 EOF
 			# http://doc.qt.nokia.com/latest/qmessagebox.html
 			Qt::MessageBox.about(self, tr("About"), about_info)
@@ -52,9 +73,15 @@ EOF
 			# http://doc.qt.nokia.com/latest/qkeysequence.html
 			exitAction.shortcut = Qt::KeySequence.new(tr("Ctrl+Q"))
 	
+			infoView = helpMenu.addAction(tr("&Info"))
+			bugView = helpMenu.addAction(tr("Report &Bug"))
+			helpMenu.addSeparator()
 			aboutView = helpMenu.addAction(tr("&About"))
+
 			connect(exitAction, SIGNAL("triggered()"), $qApp, SLOT("quit()"))
-			connect(aboutView, SIGNAL("triggered()"), self, SLOT("about()"))
+			connect(aboutView, SIGNAL("triggered()"), self, SLOT("show_about()"))
+			connect(infoView, SIGNAL("triggered()"), self, SLOT("show_info_box()"))
+			connect(bugView, SIGNAL("triggered()"), self, SLOT("show_bug_report()"))
 		end
 
 		def setup_tabs
