@@ -40,6 +40,7 @@ EOF
 
 	# Launch the application:
 	def self::launch(*args)
+          $PROGRAM_NAME = "dobbage"
 	  args.flatten!.compact!
 	  options = Slackware::Gui::Args.parse(args)
 
