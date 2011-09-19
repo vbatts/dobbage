@@ -13,6 +13,9 @@ It uses the Qt/Ruby library https://projects.kde.org/qtruby
   * https://github.com/vbatts/slack-utils
   * or https://rubygems.org/gems/slack-utils
 
+== Screenshot
+
+![](https://github.com/vbatts/dobbage/raw/master/screenshot/dobbage_screenshot.png)
 
 == License
 
