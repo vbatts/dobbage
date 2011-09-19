@@ -15,7 +15,7 @@ It uses the Qt/Ruby library https://projects.kde.org/qtruby
 
 == Screenshot
 
-<img src="https://github.com/vbatts/dobbage/raw/master/screenshot/dobbage_screenshot.png" alt="Display of a package"/>
+![](https://github.com/vbatts/dobbage/raw/master/screenshot/dobbage_screenshot.png)
 
 == License
 
